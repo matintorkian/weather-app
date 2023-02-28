@@ -6,6 +6,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Weather />
+        created by{" "}
+        <a
+          href="https://github.com/matintorkian/weather-app"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Matin Torkian
+        </a>
       </header>
     </div>
   );
