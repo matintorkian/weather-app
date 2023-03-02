@@ -8,17 +8,19 @@ export default function Weather() {
   const [loaded, setLoaded] = useState(null);
 
   let form = (
-    <div className="row">
+    <div>
       <form className="form" onSubmit={handleSubmit}>
-        <div className="col-9">
-          <input
-            type="search"
-            placeholder="Enter a city..."
-            onChange={updateCity}
-          />
-        </div>
-        <div className="col-3">
-          <input className="btn btn-primary" type="submit" value="search" />
+        <div className="row">
+          <div className="col-7">
+            <input
+              type="search"
+              placeholder="Enter a city..."
+              onChange={updateCity}
+            />
+          </div>
+          <div className="col-5">
+            <input className="btn btn-primary" type="submit" value="search" />
+          </div>
         </div>
       </form>
     </div>
@@ -59,7 +61,10 @@ export default function Weather() {
                   {" "}
                   <img src={weather.icon} alt="weather icon" />{" "}
                 </li>
-                <li>{Math.round(weather.temperature)} C</li>
+                <li className="current-temp">
+                  {Math.round(weather.temperature)}
+                  <span className="units">°C</span>
+                </li>
               </div>
             </div>
             <div className="col-6">
