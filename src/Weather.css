@@ -1,0 +1,15 @@
+.weather {
+  border: 1px solid #dddddd;
+}
+li {
+  list-style: none;
+}
+.main-temp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.form {
+  margin-top: 30px;
+  margin-left: 10px;
+}

@@ -1,7 +1,4 @@
 .App {
-  margin-top: 40px;
-  margin-left: 100px;
-}
-.weather-description {
-  list-style-type: none;
+  max-width: 500px;
+  margin: 30px auto;
 }

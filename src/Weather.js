@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./Weather.css";
 
 export default function Weather() {
   const [city, setCity] = useState(null);
@@ -8,14 +8,20 @@ export default function Weather() {
   const [loaded, setLoaded] = useState(null);
 
   let form = (
-    <form className="form" onSubmit={handleSubmit}>
-      <input
-        type="search"
-        placeholder="Enter a city..."
-        onChange={updateCity}
-      />
-      <input type="submit" value="search" />
-    </form>
+    <div className="row">
+      <form className="form" onSubmit={handleSubmit}>
+        <div className="col-9">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            onChange={updateCity}
+          />
+        </div>
+        <div className="col-3">
+          <input className="btn btn-primary" type="submit" value="search" />
+        </div>
+      </form>
+    </div>
   );
 
   function handleResponse(response) {
@@ -38,31 +44,33 @@ export default function Weather() {
   }
   if (loaded) {
     return (
-      <div>
+      <div className="weather">
         {form}
         <h1>{city}</h1>
-        <ul className="weather-description">
+        <ul>
+          <li>Time</li>
+          <li>{weather.description}</li>
+        </ul>
+        <ul>
           <div className="row">
             <div className="col-6">
-              <li>Time</li>
-              <li>{weather.description}</li>
-              <span>
+              <div className="main-temp">
                 <li>
                   {" "}
                   <img src={weather.icon} alt="weather icon" />{" "}
                 </li>
-              </span>
-              <span>{Math.round(weather.temperature)} C</span>
+                <li>{Math.round(weather.temperature)} C</li>
+              </div>
             </div>
             <div className="col-6">
-              <li>{weather.wind} km/h</li>
-              <li>Humidity:{Math.round(weather.humidity)} %</li>
+              <li>Wind: {weather.wind} km/h</li>
+              <li>Humidity: {Math.round(weather.humidity)} %</li>
             </div>
           </div>
         </ul>
       </div>
     );
   } else {
-    return <div>{form}</div>;
+    return <div className="weather">{form}</div>;
   }
 }
