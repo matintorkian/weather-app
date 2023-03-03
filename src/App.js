@@ -7,14 +7,16 @@ function App() {
     <div className="App">
       <div className="container">
         <Weather />
-        created by{" "}
-        <a
-          href="https://github.com/matintorkian/weather-app"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Matin Torkian
-        </a>
+        <footer className="footer">
+          This project is coded by Matin Torkian and is available on{" "}
+          <a
+            href="https://github.com/matintorkian/weather-app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </footer>
       </div>
     </div>
   );

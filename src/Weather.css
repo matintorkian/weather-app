@@ -4,9 +4,11 @@ h1 {
 }
 .weather {
   border: 1px solid #dddddd;
+  border-radius: 4px;
 }
 li {
   list-style: none;
+  text-transform: capitalize;
 }
 .main-temp {
   display: flex;
