@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import LoadingIcons from "react-loading-icons";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -65,6 +66,10 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <LoadingIcons.ThreeDots stroke="#212529" />
+      </div>
+    );
   }
 }

@@ -12,14 +12,18 @@ export default function TempConversion(props) {
     setUnit("celsius");
   }
 
-  if (unit == "celsius") {
+  if (unit === "celsius") {
     return (
       <div className="current-temp">
         {props.temperature}
         <span className="units">
           {" "}
           °C |{" "}
-          <a href="#" onClick={showFahrenheit}>
+          <a
+            href="https://visionary-valkyrie-04bfdd.netlify.app/"
+            rel="noreferrer"
+            onClick={showFahrenheit}
+          >
             °F
           </a>
         </span>
@@ -31,7 +35,11 @@ export default function TempConversion(props) {
         {Math.round((props.temperature * 9) / 5 + 32)}
         <span className="units">
           {" "}
-          <a href="#" onClick={showCelsius}>
+          <a
+            href="https://visionary-valkyrie-04bfdd.netlify.app/"
+            rel="noreferrer"
+            onClick={showCelsius}
+          >
             °C
           </a>{" "}
           | °F
