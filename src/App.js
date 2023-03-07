@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather defaultCity="geneva" />
         <footer className="footer">
           This project is coded by Matin Torkian and is available on{" "}
           <a
