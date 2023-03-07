@@ -64,6 +64,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    return <div className="weather">Loading... {form}</div>;
+    search();
+    return <div>Loading...</div>;
   }
 }
