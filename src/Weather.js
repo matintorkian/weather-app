@@ -36,7 +36,6 @@ export default function Weather(props) {
 
   function handleResponse(response) {
     setLoaded(true);
-    console.log(response);
     setWeather({
       city: response.data.name,
       temperature: response.data.main.temp,
