@@ -21,7 +21,7 @@ export default function WeatherInfo(props) {
             <div className="main-temp">
               <li className="main-canvas">
                 {" "}
-                <WeatherIcon icon={props.data.icon} />{" "}
+                <WeatherIcon icon={props.data.icon} size={40} />{" "}
               </li>
               <li>
                 <TempConversion

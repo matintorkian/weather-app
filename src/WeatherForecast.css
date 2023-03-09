@@ -1,0 +1,13 @@
+.forecast-elements {
+  text-align: center;
+}
+.forecastTemp-min {
+  margin-right: 5px;
+  opacity: 70%;
+}
+.forecast-day {
+  margin-bottom: 10px;
+}
+.forecast-icon {
+  margin-bottom: 6px;
+}
