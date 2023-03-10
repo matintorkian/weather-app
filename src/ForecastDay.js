@@ -3,7 +3,7 @@ import WeatherIcon from "./WeatherIcon";
 
 export default function ForecastDay(props) {
   function formatDay() {
-    let date = new Date(props.data[0].dt);
+    let date = new Date(props.data[0].dt * 1000);
     let day = date.getDay();
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     return days[day];
