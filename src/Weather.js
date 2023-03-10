@@ -44,6 +44,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
+      coordinates: response.data.coord,
     });
   }
   function search() {
@@ -63,7 +64,7 @@ export default function Weather(props) {
         {form}
         <WeatherInfo data={weather} />
         <hr />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weather.coordinates} />
       </div>
     );
   } else {
