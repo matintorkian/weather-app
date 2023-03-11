@@ -8,7 +8,7 @@ function App() {
       <div className="container">
         <Weather defaultCity="geneva" />
         <footer className="footer">
-          This project is coded by Matin Torkian and is available on{" "}
+          Coded by Matin Torkian, available on{" "}
           <a
             href="https://github.com/matintorkian/weather-app"
             target="_blank"

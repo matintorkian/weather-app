@@ -17,7 +17,6 @@ export default function TempConversion(props) {
       <div className="current-temp">
         {props.temperature}
         <span className="units">
-          {" "}
           °C |{" "}
           <a
             href="https://visionary-valkyrie-04bfdd.netlify.app/"
@@ -34,7 +33,6 @@ export default function TempConversion(props) {
       <div className="current-temp">
         {Math.round((props.temperature * 9) / 5 + 32)}
         <span className="units">
-          {" "}
           <a
             href="https://visionary-valkyrie-04bfdd.netlify.app/"
             rel="noreferrer"

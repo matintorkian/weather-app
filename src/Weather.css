@@ -1,14 +1,24 @@
 h1 {
-  margin-left: 10px;
+  font-size: 24px;
   text-transform: capitalize;
+  font-weight: 100;
+  margin: 20px;
+  line-height: 29px;
 }
 .weather {
   border: 1px solid #dddddd;
   border-radius: 4px;
 }
+ul {
+  margin: 0;
+  padding: 0;
+}
 li {
   list-style: none;
   text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
 }
 .main-temp {
   display: flex;
@@ -17,7 +27,7 @@ li {
 }
 .form {
   margin-top: 20px;
-  margin-left: 10px;
+  margin-left: 22px;
 }
 
 .current-temp {
@@ -34,10 +44,8 @@ li {
   position: relative;
   font-size: 18px;
   top: -34px;
+  margin: 0 auto;
 }
 .main-canvas {
   margin-right: 10px;
-}
-a {
-  text-decoration: none;
 }
